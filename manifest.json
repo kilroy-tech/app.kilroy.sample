@@ -1,0 +1,48 @@
+{
+    "manifestVersion": 1,
+    "id"            : "kilroy.sample",
+    "displayName"   : "Kilroy Sample App",
+    "desc"          : "Sample KApp skeleton",
+    "version"       : "1.0",
+    "author"        : "Kilroy BC, LLC",
+    "authorInfoUrl" : "http://kilroy.tech",
+    "appInfoUrl"    : "/apps/kilroy.sample/info.html",
+    "appImageUrl"   : "https://kilroydao.com/wp-content/uploads/2022/04/kilroy-transparent-cropped-1.png",
+    "locked"        : true,
+    "override"      : true,
+    "initEntrypoints": [
+        {
+            "pdName"    : "sample",
+            "pdAlias"   : "kilroy.sample",
+            "webhook"   : "init_hook",
+            "args"      : {"alias": "kilroy.sample"}
+        }
+    ],
+    "userEntrypoints": [
+        {
+            "pdAlias"   : "kilroy.sample",
+            "desc"      : "Kilroy Sample"
+        }
+    ],
+    "resumeEntrypoints": [
+        {
+            "pdAlias"   : "kilroy.sample",
+            "webhook"   : "resume_hook",
+            "args"      : {}
+        }
+    ],
+    "pauseEntrypoints": [
+        {
+            "pdAlias"   : "kilroy.sample",
+            "webhook"   : "pause_hook",
+            "args"      : {}
+        }
+    ],
+    "stopEntrypoints": [
+        {
+            "pdAlias"   : "kilroy.sample",
+            "webhook"   : "stop_hook",
+            "args"      : {}
+        }
+    ]
+}
