@@ -1,9 +1,9 @@
 {
-    "manifestVersion": 1,
+    "manifestVersion": 2,
     "id"            : "kilroy.sample",
     "displayName"   : "Kilroy Sample App",
     "desc"          : "Sample KApp skeleton",
-    "version"       : "1.0",
+    "version"       : "1.1",
     "author"        : "Kilroy BC, LLC",
     "authorInfoUrl" : "http://kilroy.tech",
     "appInfoUrl"    : "/apps/kilroy.sample/info.html",
@@ -11,39 +11,30 @@
     "locked"        : true,
     "override"      : true,
     "hidden"        : false,
-    "initEntrypoints": [
-        {
-            "pdName"    : "sample",
-            "pdAlias"   : "kilroy.sample",
-            "webhook"   : "init_hook",
-            "args"      : {"alias": "kilroy.sample"}
+    "pdClasses": {
+        "sample"    : {
+            "pdName" : "sample",
+            "pdAlias": "kilroy.sample",
+            "desc"  : "Kilroy Sample App",
+            "runOnStart": true,
+            "visible": true,
+            "multipleAllowed": false,
+            "init"  : "init_hook",
+            "resume": "resume_hook",
+            "pause" : "pause_hook",
+            "stop"  : "stop_hook"
+        },
+        "widget"    : {
+            "pdName" : "widget",
+            "pdAlias": "kilroy.sample.widget",
+            "desc"  : "Kilroy Sample App Widget",
+            "runOnStart": false,
+            "visible": true,
+            "multipleAllowed": true,
+            "init"  : "init_hook",
+            "resume": "resume_hook",
+            "pause" : "pause_hook",
+            "stop"  : "stop_hook"
         }
-    ],
-    "userEntrypoints": [
-        {
-            "pdAlias"   : "kilroy.sample",
-            "desc"      : "Kilroy Sample"
-        }
-    ],
-    "resumeEntrypoints": [
-        {
-            "pdAlias"   : "kilroy.sample",
-            "webhook"   : "resume_hook",
-            "args"      : {}
-        }
-    ],
-    "pauseEntrypoints": [
-        {
-            "pdAlias"   : "kilroy.sample",
-            "webhook"   : "pause_hook",
-            "args"      : {}
-        }
-    ],
-    "stopEntrypoints": [
-        {
-            "pdAlias"   : "kilroy.sample",
-            "webhook"   : "stop_hook",
-            "args"      : {}
-        }
-    ]
+    }
 }

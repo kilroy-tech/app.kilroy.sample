@@ -1,12 +1,12 @@
 /**
- * kilroy.tradebot/btd_bot/init.js - preflight/postflight functions for kilroy.tradebot/btd_bot/init
- * @module kilroy.tradebot/btd_bot/init
- * @file kilroy.sample/init preflight/postflight implementation
+ * kilroy.sample/new_widget.js - preflight/postflight functions for kilroy.sample/new_widget
+ * @module kilroy.sample/new_widget
+ * @file kilroy.sample/new_widget preflight/postflight implementation
  * @author system
- * @copyright Copyright ©2023, Concluent Systems, LLC. All rights reserved.
+ * @copyright Copyright ©2024, Concluent Systems, LLC. All rights reserved.
  */
 "use strict";
-const MODULE_NAME = "workflow:kilroy.sample/init";
+const MODULE_NAME = "workflow:kilroy.sample/new_widget";
 const debug = require('debug')(MODULE_NAME);
 debug.log = console.info.bind(console); //https://github.com/visionmedia/debug#readme
 const Promise = require("bluebird"); // jshint ignore:line
