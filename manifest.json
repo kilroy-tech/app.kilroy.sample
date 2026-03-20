@@ -3,7 +3,7 @@
     "id"            : "kilroy.sample",
     "displayName"   : "Kilroy Sample App",
     "desc"          : "Sample Manager",
-    "version"       : "1.2",
+    "version"       : "1.2.1",
     "author"        : "Kilroy BC, LLC",
     "authorInfoUrl" : "http://kilroy.tech",
     "appInfoUrl"    : "/apps/kilroy.sample/info.html",
@@ -34,7 +34,8 @@
             "init"  : "init_hook",
             "resume": "resume_hook",
             "pause" : "pause_hook",
-            "stop"  : "stop_hook"
+            "stop"  : "stop_hook",
+            "ui_stop_wf": "kilroy.sample/widget/close_widget"
         }
     }
 }
